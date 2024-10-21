@@ -9,13 +9,6 @@ body {
   /*scrollbar-width: none;*/
 }
 
-div {
-  border: solid 2px;
-}
-
-
-
-
 h1 {
   font-family: "poppins";
   font-weight: 500;
@@ -94,7 +87,50 @@ h1 {
     text-align: center;
     }
 }
-    */
+*/
+
+    #preloader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #16274b;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .letters {
+      font-size: 7rem;
+      font-weight: 900;
+  }
+  
+  .letters > span {
+      animation: glow 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes glow {
+      0%, 100% {
+          color: #fff;
+          text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+      }
+      10%, 90% {
+          color: #ffffff;
+          text-shadow: none;
+      }
+  }
+  
+  .letters > span:nth-child(2) { animation-delay: 0.2s; }
+  .letters > span:nth-child(3) { animation-delay: 0.4s; }
+  .letters > span:nth-child(4) { animation-delay: 0.6s; }
+  .letters > span:nth-child(5) { animation-delay: 0.8s; }
+  .letters > span:nth-child(6) { animation-delay: 1s; }
+  .letters > span:nth-child(7) { animation-delay: 1.2s; }
+  .letters > span:nth-child(8) { animation-delay: 1.4s; }
+  .letters > span:nth-child(9) { animation-delay: 1.6s; }
+  
 
 .botonera {
   display: block;

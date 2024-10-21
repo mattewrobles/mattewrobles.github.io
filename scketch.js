@@ -4,3 +4,9 @@
 //! alerta
 ////Eliminar
 
+window.addEventListener('load', function () {
+  const preloader = document.getElementById('preloader');
+  setTimeout(() => {
+      preloader.style.display = 'none';
+  }, 2000); // 2000 milisegundos = 2 segundos
+});
