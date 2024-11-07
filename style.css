@@ -1,12 +1,22 @@
 html,
 body {
-  background-color: #1f2544;
+  background-color: #0000009a;
   color: #faf7f0;
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /*scrollbar-width: none;*/
+  overflow: hidden;
+  height: 100%; /* Ensure the body and html take up the full height */
+}
+
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 h1 {
@@ -22,115 +32,94 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative; /* Ensure content is above the canvas */
+  z-index: 1; /* Ensure content is above the canvas */
 }
+
 .container {
   padding: 2rem;
 }
 
-/*
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #070707;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .letters {
-    font-size: 7rem;
-    font-weight: 900;
+  font-size: 7rem;
+  font-weight: 900;
 }
+
 .letters > span {
-    animation: glow 2.5s ease-in-out infinite;
+  animation: glow 2.5s ease-in-out infinite;
 }
+
 @keyframes glow {
-    0%,
-    100% {
+  0%,
+  100% {
     color: #fff;
-    text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
-    }
-    10%,
-    90% {
+    text-shadow: 0 0 12px #0b6331, 0 0 50px #39d695, 0 0 100px #39d668;
+  }
+  10%,
+  90% {
     color: #ffffff;
     text-shadow: none;
-    }
-
-    
+  }
 }
+
 .letters > span:nth-child(2) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .letters > span:nth-child(3) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .letters > span:nth-child(4) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .letters > span:nth-child(5) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 .letters > span:nth-child(6) {
-    animation-delay: 1s;
+  animation-delay: 1s;
 }
 .letters > span:nth-child(7) {
-    animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 .letters > span:nth-child(8) {
-    animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 .letters > span:nth-child(9) {
-    animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
-.letters > span:nth-child(10) {
-    animation-delay: 1.8s;
-}
-.letters > span:nth-child(11) {
-    animation-delay: 2s;
-}
-@media screen and (max-width: 574px) {
-    .letters {
-    display: block;
-    font-size: 4rem;
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .letters {
+    font-size: 2rem;
     font-weight: 800;
     text-align: center;
-    }
-}
-*/
+  }
 
-    #preloader {
-      position: fixed;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #16274b;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .button {
+    font-size: 12px;
+    padding: 4px;
   }
-  
-  .letters {
-      font-size: 7rem;
-      font-weight: 900;
-  }
-  
-  .letters > span {
-      animation: glow 2.5s ease-in-out infinite;
-  }
-  
-  @keyframes glow {
-      0%, 100% {
-          color: #fff;
-          text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
-      }
-      10%, 90% {
-          color: #ffffff;
-          text-shadow: none;
-      }
-  }
-  
-  .letters > span:nth-child(2) { animation-delay: 0.2s; }
-  .letters > span:nth-child(3) { animation-delay: 0.4s; }
-  .letters > span:nth-child(4) { animation-delay: 0.6s; }
-  .letters > span:nth-child(5) { animation-delay: 0.8s; }
-  .letters > span:nth-child(6) { animation-delay: 1s; }
-  .letters > span:nth-child(7) { animation-delay: 1.2s; }
-  .letters > span:nth-child(8) { animation-delay: 1.4s; }
-  .letters > span:nth-child(9) { animation-delay: 1.6s; }
-  
+}
 
 .botonera {
   display: block;
@@ -157,12 +146,11 @@ h1 {
 }
 
 .hub:hover {
-  color: #314b6f;
+  color: #316f45;
   box-shadow: 0px, 10px, 20px, #030c14;
 }
 
 .btn {
-  /*margin-block: 1rem;*/
   height: auto;
   position: relative;
   width: 100%;
@@ -182,6 +170,7 @@ h1 {
   transition: 0.5s;
   border: 2px solid #6a688f;
   cursor: pointer;
+  background-color: #000000f4;
 }
 .button:hover {
   background: #faf7f0;
