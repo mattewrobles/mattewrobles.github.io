@@ -1,20 +1,20 @@
-const canvas = document.getElementById('matrix-canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("matrix-canvas");
+const ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const fontSize = 16;
 const columns = canvas.width / fontSize;
 
 const drops = Array.from({ length: columns }).fill(1);
 
 function draw() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = '#0F0';
+  ctx.fillStyle = "#0F0";
   ctx.font = `${fontSize}px monospace`;
 
   drops.forEach((y, index) => {
@@ -32,17 +32,37 @@ function draw() {
 
 setInterval(draw, 33);
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
 
+// Commenting out unused function and event listener
+// function createCursorTrail(x, y) {
+//   const circle = document.createElement("div");
+//   circle.className = "cursor-trail";
+//   circle.style.left = `${x}px`;
+//   circle.style.top = `${y}px`;
+//   document.body.appendChild(circle);
+
+//   setTimeout(() => {
+//     circle.style.transform = "scale(2)";
+//     circle.style.opacity = "0";
+//   }, 0);
+
+//   setTimeout(() => {
+//     circle.remove();
+//   }, 300);
+// }
+
+// window.addEventListener("mousemove", (e) => {
+//   createCursorTrail(e.clientX, e.clientY);
+// });
 
 // Preloader functionality
-window.addEventListener('load', function () {
-  const preloader = document.getElementById('preloader'); 
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
   setTimeout(() => {
-      preloader.style.display = 'none';
-    }, 2000); // Hide the preloader after 2 seconds
+    preloader.style.display = "none";
+  }, 2000); // Hide the preloader after 2 seconds
 });
-
