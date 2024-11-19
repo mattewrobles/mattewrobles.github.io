@@ -31,3 +31,4 @@ circles.push({ x: mouseX, y: mouseY, size: 10, alpha: 255 });
 
 function windowResized() {
 resizeCanvas(windowWidth, windowHeight); }
+

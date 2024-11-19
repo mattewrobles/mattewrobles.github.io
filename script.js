@@ -37,28 +37,6 @@ window.addEventListener("resize", () => {
   canvas.height = window.innerHeight;
 });
 
-// Commenting out unused function and event listener
-// function createCursorTrail(x, y) {
-//   const circle = document.createElement("div");
-//   circle.className = "cursor-trail";
-//   circle.style.left = `${x}px`;
-//   circle.style.top = `${y}px`;
-//   document.body.appendChild(circle);
-
-//   setTimeout(() => {
-//     circle.style.transform = "scale(2)";
-//     circle.style.opacity = "0";
-//   }, 0);
-
-//   setTimeout(() => {
-//     circle.remove();
-//   }, 300);
-// }
-
-// window.addEventListener("mousemove", (e) => {
-//   createCursorTrail(e.clientX, e.clientY);
-// });
-
 // Preloader functionality
 window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");

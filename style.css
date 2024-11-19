@@ -224,6 +224,47 @@ h1 {
   box-shadow: 0px, 10px, 20px, #d2eaff;
 }
 
+.dropbtn {
+  background-color: #000000f4;
+  color: #faf7f0;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000f4;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content .button {
+  color: #faf7f0;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content .button:hover {
+  background-color: #575757;
+}
+
+.show {
+  display: block;
+}
+
 header {
   display: flex;
   flex-direction: column;
