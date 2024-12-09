@@ -25,7 +25,7 @@
         <header>
           <div id="preloader">
             <div class="letters">
-              <span>P</span>
+              <!-- <span>P</span>
               <span>O</span>
               <span>R</span>
               <span>T</span>
@@ -33,10 +33,11 @@
               <span>O</span>
               <span>L</span>
               <span>I</span>
-              <span>O</span>
+              <span>O</span> -->
             </div>
+            Se está actualizando todo el sistema, por favor espere. El preloader está en desarrollo
           </div>
-          <h1 class="name">Mauricio Robles</h1>
+          <h1 class="name">MAURICIO ROBLES</h1>
         </header>
         <div class="botonera">
           <div class="cont">
@@ -50,8 +51,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="button"
-              >Hola Mundo</a
-            >
+              >Hola Mundo</a>
           </div>
           <div class="btn">
             <a
@@ -59,8 +59,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="button"
-              >Condicionales</a
-            >
+              >Condicionales</a>
           </div>
           <div class="btn">
             <a
@@ -68,8 +67,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="button"
-              >Computer Vision</a
-            >
+              >Computer Vision</a>
           </div>
           <div class="btn">
             <a
@@ -77,8 +75,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="button"
-              >Programación orientada a objetos</a
-            >
+              >Programación orientada a objetos</a>
           </div>
           <div class="btn">
             <a
@@ -86,8 +83,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="button"
-              >Slider</a
-            >
+              >Slider</a>
           </div>
           <div class="btn">
             <a
@@ -95,58 +91,38 @@
               target="_blank"
               rel="noopener noreferrer"
               class="button"
-              >For loop</a
-            >
+              >For loop</a>
           </div>
 
-          <div class="btn">
-            <a
-              href="https://mattewrobles.github.io/wave_collapse/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button"
-              >Wave function Collapse</a
-            >
-          </div>
+          <!-- start nav -->
+          <nav id="menu">
+            <!-- start menu -->
+            <ul>
+              <li><a
+                href="https://mattewrobles.github.io/wave_collapse/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+                >Wave function Collapse</a>
+              <!-- start menu desplegable -->
+                <ul>
+                  <li><a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button"
+                    >Nueva rama</a></li>
+                </ul>
+              <!-- end menu desplegable -->
+              </li>
+            </ul>
+            <!-- end menu -->
+            </nav>
+            <!-- end nav -->
         </div>
       </div>
     </main>
     <script src="script.js"></script>
     <script src="sketch.js"></script>
-    <script>
-      let circles = [];
-
-      function setup() {
-        let canvas = createCanvas(windowWidth, windowHeight);
-        canvas.position(0, 0);
-        canvas.style("z-index", "-1");
-        noStroke();
-      }
-
-      function draw() {
-        clear();
-        background(0, 0, 0, 25);
-
-        for (let i = circles.length - 1; i >= 0; i--) {
-          let circle = circles[i];
-          fill(0, 255, 0, circle.alpha);
-          ellipse(circle.x, circle.y, circle.size);
-          circle.size += 2;
-          circle.alpha -= 5;
-
-          if (circle.alpha <= 0) {
-            circles.splice(i, 1);
-          }
-        }
-      }
-
-      function mouseMoved() {
-        circles.push({ x: mouseX, y: mouseY, size: 10, alpha: 255 });
-      }
-
-      function windowResized() {
-        resizeCanvas(windowWidth, windowHeight);
-      }
-    </script>
   </body>
 </html>
