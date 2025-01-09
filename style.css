@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: #0000009a;
+  background-color: #000000b4;
   color: #faf7f0;
   margin: 0;
   padding: 0;
@@ -32,12 +32,12 @@ h1 {
   font-family: "poppins";
   font-weight: 500;
   font-style: normal;
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
 }
 
 .main {
-  padding: 3rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,7 @@ h1 {
 }
 
 .container {
-  padding: 2rem;
+  padding: 0.2rem;
 }
 
 #preloader {
@@ -212,16 +212,17 @@ h1 {
   border-radius: 1rem;
   font-size: 16px;
   transition: 0.5s;
-  border: 2px solid #6a688f;
+  border: 2px solid #688f86;
   cursor: pointer;
   background-color: #000000f4;
   width: 300px; /* Set a fixed width for all buttons */
   text-align: center; /* Ensure text is centered */
 }
 .button:hover {
-  background: #faf7f0;
+  background: #e6fff8;
   color: #1c315d;
   box-shadow: 0px, 10px, 20px, #d2eaff;
+  scale: 1.05;
 }
 
 .dropbtn {
@@ -269,4 +270,60 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* menu */
+#menu ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+
+ /* menu desplegable */
+
+#menu ul ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  padding-top:0px;
+
+}
+/* items del menu desplegable */
+#menu ul ul li {
+  float:none;
+  width:150px;
+
+}
+ /* items del menu */
+
+#menu ul li {
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+  border-radius: 50px;
+
+}
+
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+  line-height:120%;
+  padding:10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+#menu ul li:hover > ul {
+  display:block;
+}
+
+/* Ensure the dropdown menu stays open when clicked */
+#menu ul li.open > ul {
+  display: none;
+}
+
+.reset-icon {
+  display: none;
 }
