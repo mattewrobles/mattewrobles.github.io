@@ -13,7 +13,7 @@ function draw() {
 
   for (let i = circles.length - 1; i >= 0; i--) {
     let circle = circles[i];
-    fill(0, 255, 0, circle.alpha);
+    fill(240, 240, 200, circle.alpha);
     ellipse(circle.x, circle.y, circle.size);
     circle.size += 2;
     circle.alpha -= 5;

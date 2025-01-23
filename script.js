@@ -45,4 +45,3 @@ window.addEventListener("load", function () {
   }, 2000); // Hide the preloader after 2 seconds
 });
 
-
