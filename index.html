@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="files/favicons/128x128.png" />
@@ -20,100 +20,111 @@
   </head>
   <body>
     <canvas id="matrix-canvas"></canvas>
+
+    <div id="preloader">
+      <div class="letters">
+        <span>P</span><span>O</span><span>R</span><span>T</span>
+        <span>F</span><span>O</span><span>L</span><span>I</span><span>O</span>
+      </div>
+    </div>
+
     <main class="main">
       <div class="container">
-        <header>
-          <div id="preloader">
-            <div class="letters">
-              <span>P</span>
-              <span>O</span>
-              <span>R</span>
-              <span>T</span>
-              <span>F</span>
-              <span>O</span>
-              <span>L</span>
-              <span>I</span>
-              <span>O</span>
-            </div>
-          </div>
-          <h1 class="name">MAURICIO ROBLES</h1>
-        </header>
-        <div class="botonera">
-          <div class="cont">
-            <a class="hub" href="https://github.com/mattewrobles">
-              <i class="fa-brands fa-github fa-2xl"></i>
+
+        <header class="hero">
+          <div class="hero-badge">Available for projects</div>
+          <h1 class="name">Mauricio<br><span class="name-accent">Robles</span></h1>
+          <p class="bio">Creative developer exploring the intersection of code and art. Building interactive experiences with p5.js, computer vision & machine learning.</p>
+          <div class="social-links">
+            <a class="social-link" href="https://github.com/mattewrobles" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
             </a>
           </div>
-          <div class="btn">
-            <a
-              href="https://mattewrobles.github.io/hola_mundo/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button"
-              >Hola Mundo</a>
-          </div>
-          <div class="btn">
-            <a
-              href="https://mattewrobles.github.io/condicionales/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button"
-              >Condicionales</a>
-          </div>
-          <div class="btn">
-            <a
-              href="https://mattewrobles.github.io/computer_vision/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button"
-              >Computer Vision</a>
-          </div>
-          <div class="btn">
-            <a
-              href="https://mattewrobles.github.io/programacion_orientada_a_objetos/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button"
-              >Programación orientada a objetos</a>
-          </div>
-          <div class="btn">
-            <a
-              href="https://mattewrobles.github.io/slider/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button"
-              >Slider</a>
-          </div>
-          <div class="btn">
-            <a
-              href="https://mattewrobles.github.io/for_loop/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button"
-              >For loop</a>
-          </div>
+        </header>
 
-          <div class="btn">
-            <a
-                href="https://mattewrobles.github.io/wave_collapse/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button"
-                >Wave function Collapse</a>
-          </div>
+        <section class="projects-section">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
 
-          <div class="btn">
-            <a
-                href="https://mattewrobles.github.io/machine_learning_project/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button"
-                >Machine Learning Project</a>
+            <a href="https://mattewrobles.github.io/wave_collapse/" target="_blank" rel="noopener noreferrer" class="card">
+              <div class="card-icon">⟁</div>
+              <div class="card-content">
+                <h3>Wave Function Collapse</h3>
+                <p>Procedural generation algorithm creating infinite patterns</p>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="https://mattewrobles.github.io/machine_learning_project/" target="_blank" rel="noopener noreferrer" class="card">
+              <div class="card-icon">◈</div>
+              <div class="card-content">
+                <h3>Machine Learning</h3>
+                <p>Integration with video and real-time ML inference</p>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="https://mattewrobles.github.io/computer_vision/" target="_blank" rel="noopener noreferrer" class="card">
+              <div class="card-icon">◎</div>
+              <div class="card-content">
+                <h3>Computer Vision</h3>
+                <p>Teachable Machine integrated with p5.js</p>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="https://mattewrobles.github.io/slider/" target="_blank" rel="noopener noreferrer" class="card">
+              <div class="card-icon">▷</div>
+              <div class="card-content">
+                <h3>Slider</h3>
+                <p>Interactive slider component with smooth animations</p>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="https://mattewrobles.github.io/programacion_orientada_a_objetos/" target="_blank" rel="noopener noreferrer" class="card">
+              <div class="card-icon">⬡</div>
+              <div class="card-content">
+                <h3>OOP</h3>
+                <p>Object-oriented programming concepts in action</p>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="https://mattewrobles.github.io/for_loop/" target="_blank" rel="noopener noreferrer" class="card">
+              <div class="card-icon">∞</div>
+              <div class="card-content">
+                <h3>For Loop</h3>
+                <p>Visual exploration of loop-based generative patterns</p>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="https://mattewrobles.github.io/condicionales/" target="_blank" rel="noopener noreferrer" class="card">
+              <div class="card-icon">⊹</div>
+              <div class="card-content">
+                <h3>Condicionales</h3>
+                <p>Interactive conditionals and logic experiments</p>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
+            <a href="https://mattewrobles.github.io/hola_mundo/" target="_blank" rel="noopener noreferrer" class="card">
+              <div class="card-icon">✦</div>
+              <div class="card-content">
+                <h3>Hola Mundo</h3>
+                <p>First p5.js project — where it all started</p>
+              </div>
+              <div class="card-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </a>
+
           </div>
-          
-        </div>
+        </section>
+
       </div>
     </main>
+
     <script src="script.js"></script>
     <script src="sketch.js"></script>
   </body>
